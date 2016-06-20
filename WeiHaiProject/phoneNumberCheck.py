@@ -25,7 +25,7 @@ def main():
         'Conection':'keep-alive'
     }
     # 设置发包内容
-    base_number = "%d" %1300163
+    base_number = "%d" %1300164
     tail_numbers = open("4tailNumber.txt","r")
     registed = open("registedNumber","w+")
 
@@ -33,6 +33,7 @@ def main():
         tail_number = tail_numbers.readline()
         if tail_number:
             req_body = "mobilePhone="+base_number+tail_number
+            print req_body
             #req_body='mobilePhone=18811392560'
             # urllib2提供 Request 类，用于添加http报1417
             # 头
