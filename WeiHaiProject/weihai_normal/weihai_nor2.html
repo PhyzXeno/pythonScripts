@@ -1,0 +1,1113 @@
+
+
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta HTTP-EQUIV="Cache-control" CONTENT="no-cache">  
+<title>安全检测系统</title>
+<link rel="shortcut icon" href="template_dir/1/{$files$}/favicon.ico?v=1" />
+<script type="text/javascript" src="template_dir/1/{$files$}/DatePicker/WdatePicker.js"></script>
+
+<link href="template_dir/1/{$files$}/css.css?v=211" rel="stylesheet" type="text/css" />
+<link href="template_dir/1/{$files$}/my.css?v=211" rel="stylesheet" type="text/css" />
+<script type='text/javascript' src='template_dir/1/{$files$}/jquery.min.js'></script>
+<script type="text/javascript" src="template_dir/1/{$files$}/jquery.corner.js"></script>
+<script type="text/javascript" src="template_dir/1/{$files$}/jquery.qtip-1.0.0-rc3.min.js"></script>
+
+<style>
+.listTable {
+	width:96%;
+}
+.wrap {
+	width:95%;
+}
+.hd .nav{
+	width:100%;
+}
+</style>
+
+
+<script>
+window.onerror=function(){return true};
+function initTips(className)
+{
+	jQuery('.' + className).each(function(){
+		jQuery(this).qtip({
+			content:jQuery(this).attr('rel'),
+			position: {
+				corner: {
+					target: 'rightMiddle',
+					tooltip: 'leftMiddle'
+				}
+			},
+			style: {
+				 name: 'blue',
+				 padding: '7px 13px',
+				 width: {
+					max: 310,
+					min: 300
+				 },
+				 tip: true
+			},
+			show: {
+				solo: true,
+				when: 'mouseover'
+			}
+		});
+	});
+}
+$(function() {
+	initTips('text_tips1');
+});
+
+function realGo(message) {
+	if (confirm(message)) {
+		return true;
+	}
+	return false;
+}
+
+function showHide(div,obj){
+	var div=$(div);
+	if(div.css('display')=='none'){
+		div.slideDown();
+	}else{
+		div.slideUp();
+	}
+	return false;
+}
+
+</script>
+
+<div class="hd" style="">
+	<div class="wrap">
+	  <div class="logo" style=padding-top:12px>
+		<a href="/"><img src=template_dir/1/{$files$}/logo15.png border=0 width=120/></a>	  </div>
+        
+		<div class="link">
+
+				
+				<a href="user.php" title="扫描次数:671次">您好: 企业用户 beiyoutest</a>
+
+		&nbsp;<font color=red>
+				</font>
+		
+		 | 
+		<a href="about.php" target=_blank onclick="return showAbout();">关于</a>
+
+		 | <a href="login.php?act=logout&lock=1&username=beiyoutest&t=1466875338">锁屏</a>
+		  | <a href="login.php?act=logout&t=1466875338">退出</a>
+		
+		<br>
+
+
+
+        </div>
+        
+		<div class="nav">
+			<ul class="menu">
+
+			  <li ><a href="new.php?t=1466875338">添加任务</a>
+					<ul>
+						<li><a  href="new.php">添加任务</a></li>
+
+												<li><a  href="new.netflow.php">导入Url列表</a></li>
+						
+					</ul>
+			  </li>
+                
+                <li class=selected><a href="list.php?t=1466875338">任务管理</a>
+					<ul>
+
+
+					<li>
+					<a style='color:#000;font-weight:bold' href=list.php>任务管理</a></li>
+
+					<li>
+					<a  href=all.php>风险统计</a></li>
+
+										<li>
+					<a  href=list.php?taskfrom=1>API任务列表</a></li>
+					
+					</ul>
+				</li>
+			
+				
+					<li ><a href="v.index.php?t=1466875338">检测工具</a>
+						<ul>
+						<li>
+						<a  href=v.list.php>可用性及平稳度监测</a></li>
+
+						<li>
+						<a  href=v.info.php>信息收集</a></li>
+
+						<li>
+						<a  href=v.tools.php>漏洞验证工具箱</a></li>
+
+						</ul>
+
+					</li>
+
+					<li ><a href="center_global.php?t=1466875338">数据中心</a>
+					</li>
+
+									
+				
+
+			</ul>
+			<div class="help">
+
+									<a href="hosts.php?t=1466875338">系统授权</a>
+				
+				<a  href="user.php?t=1466875338">用户中心</a>
+				
+							
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<center>
+<div id='msg'><b><font style="font-size:15px;"></font></b></div>
+
+<style>
+.aside{width:210px; float:left;background-color:#FBFBFB; border:#D5D5D5 solid 1px; overflow:hidden; margin-bottom:10px; zoom:1;padding-bottom:3px}
+.aside li {
+	cursor:pointer;
+	padding-left:12px;
+    height: 32px;
+    line-height: 32px;
+    margin-bottom: 1px;
+}
+.aside ul {
+	padding-bottom: 8px;
+}
+.aside .currentA{font-weight: bold;background: url(template_dir/1/{$files$}/menu_li_cur.png) repeat-y scroll 0 0 #E5E9ED;}
+</style>
+
+<script>
+$(document).ready(function() {
+$(".aside li").mouseover(function(){
+	if ($(this).attr("class")!="currentA") $(this).css("background-color", "#eaF0F3");
+	}).mouseout(function(){
+	if ($(this).attr("class")!="currentA") $(this).css("background-color", "#FBFBFB");
+});
+});
+</script>
+<table width=96%><tr><td valign="top" style="padding:0px;width:210px">
+	<div class="aside">
+		<h4 class="asideHead" style="padding-bottom:3px">
+		<div style="float:left;">任务分类</div>
+		
+				<div style="float:right;">
+		<a href="#" onclick="showMap();return false;">地图</a>
+		</div>
+
+		<div style="float:right;padding-top:10px">
+		<a href="#" onclick="showMap();return false;"><img src=template_dir/1/{$files$}/silky/magnifier.png></a>
+		</div>
+		
+		<div style="clear:both;"></div>
+		
+		</h4>
+		<ul>
+					<li onclick='document.location=this.childNodes[0].href;' class='currentA' ><a href="list.php?taskfrom=0">常规任务</a></li>
+		</ul>
+
+
+		<h4 class="asideHead" style="border-top:#D5D5D5 solid 1px;padding-bottom:3px">其他</h4>
+		<ul>
+		  <li onclick='document.location=this.childNodes[0].href;'><a href=all.php>风险统计</a></li>
+		  <li onclick='document.location=this.childNodes[0].href;' ><a href=plan.php>周期扫描计划</a></li>
+		  <li onclick='document.location=this.childNodes[0].href;' ><a href=taskfrom.php>任务分类设置</a></li>
+		</ul>
+
+		<h4 class="asideHead" style="border-top:#D5D5D5 solid 1px;padding-bottom:3px">参考</h4>
+		<ul>
+		  <li onclick="window.open('../secinfo/')"><a>安全知识库</a></li>
+		</ul>
+		
+		
+	</div>
+</td><td style="padding:3px;"></td><td valign="top" style="padding:0px;">
+		<div style=background-color:#6189B0;>
+		<style>
+.c_siteTitle{padding-top:5px;color:#333;font-size:13px}
+.c_nextLine{padding-top:5px;}
+
+</style>
+<form method="post" name="mainForm" action="?">
+<input  type="hidden" name="AITIME" value="1466871544" size=10>
+<table border=0 cellspacing=1 cellpadding="4" width="100%">
+	<tr>
+    <td  colspan="5" class="asideHead">&nbsp;&nbsp;
+		
+	当前位置：<font color=#333> www.hitwh.edu.cn </font>等57个任务 <font style='font-size:13px;' color='red'>(14个高危，7个中危网站)</font>&nbsp;&nbsp;<a href=all.php?batchid=6957134>风险统计</a>
+	</td>
+
+  </tr>
+
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	1 <input class="c_select" type="checkbox" name="selectedId[]" value="6957170">
+	</span>
+
+	
+	www.hitwh.edu.cn	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957170' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957170>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957170>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957170' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	2 <input class="c_select" type="checkbox" name="selectedId[]" value="6957169">
+	</span>
+
+	
+	www.wd120.com.cn	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957169' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957169>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957169>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957169' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	3 <input class="c_select" type="checkbox" name="selectedId[]" value="6957168">
+	</span>
+
+	
+	www.wdzgyy.com	
+	<div class='c_siteTitle'>- 山东省文登整骨医院</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957168' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957168>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957168>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957168' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	4 <input class="c_select" type="checkbox" name="selectedId[]" value="6957167">
+	</span>
+
+	
+	www.whhospital.com	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957167' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957167>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957167>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957167' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	5 <input class="c_select" type="checkbox" name="selectedId[]" value="6957166">
+	</span>
+
+	
+	www.shiliyiyuan.cn	
+	<div class='c_siteTitle'>- 威海市立医院 | 威海医院 | 威海最好...</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957166' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957166>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957166>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957166' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	6 <input class="c_select" type="checkbox" name="selectedId[]" value="6957165">
+	</span>
+
+	
+	www.wh.sdu.edu.cn	
+	<div class='c_siteTitle'>- 山东大学（威海）</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957165' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957165>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957165>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957165' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	7 <input class="c_select" type="checkbox" name="selectedId[]" value="6957164">
+	</span>
+
+	
+	www.weihaicollege.com	
+	<div class='c_siteTitle'>- 威海职业学院威海市技术学院</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957164' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957164>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957164>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957164' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	8 <input class="c_select" type="checkbox" name="selectedId[]" value="6957163">
+	</span>
+
+	
+	www.wh-air.com	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957163' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957163>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957163>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957163' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	9 <input class="c_select" type="checkbox" name="selectedId[]" value="6957162">
+	</span>
+
+	
+	www.whqcz.cn	
+	<div class='c_siteTitle'>- 威海汽车站 - 威海交通运输集团有限公司</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957162' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957162>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957162>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957162' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	10 <input class="c_select" type="checkbox" name="selectedId[]" value="6957161">
+	</span>
+
+	
+	www.whckee.gov.cn	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957161' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957161>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957161>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957161' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	11 <input class="c_select" type="checkbox" name="selectedId[]" value="6957160">
+	</span>
+
+	
+	www.blueweihai.com	
+	<div class='c_siteTitle'>- 威海投资,威海招商-威海经济技术开发区招...</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957160' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957160>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957160>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957160' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	12 <input class="c_select" type="checkbox" name="selectedId[]" value="6957159">
+	</span>
+
+	
+	www.whte.gov.cn	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957159' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957159>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957159>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957159' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	13 <input class="c_select" type="checkbox" name="selectedId[]" value="6957158">
+	</span>
+
+	
+	www.96121.cn	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957158' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957158>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957158>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957158' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	14 <input class="c_select" type="checkbox" name="selectedId[]" value="6957157">
+	</span>
+
+	
+	www.gz197	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957157' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957157>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957157>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957157' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	15 <input class="c_select" type="checkbox" name="selectedId[]" value="6957156">
+	</span>
+
+	
+	www.whlib.com	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957156' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957156>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957156>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957156' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	16 <input class="c_select" type="checkbox" name="selectedId[]" value="6957155">
+	</span>
+
+	
+	www.whredcross.org	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957155' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957155>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957155>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957155' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	17 <input class="c_select" type="checkbox" name="selectedId[]" value="6957154">
+	</span>
+
+	
+	www.sdppc.com.cn	
+	<div class='c_siteTitle'>- 山东生产力促进中心</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957154' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957154>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957154>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957154' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	18 <input class="c_select" type="checkbox" name="selectedId[]" value="6957153">
+	</span>
+
+	
+	www.whlawyer.net	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957153' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957153>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957153>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957153' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	19 <input class="c_select" type="checkbox" name="selectedId[]" value="6957152">
+	</span>
+
+	
+	www.whrsks.gov.cn	
+	
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957152' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957152>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957152>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957152' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+<tr>
+
+
+	<td align="left" class="td1 width_class" style="width:320px;padding-left:15px;">
+
+	<span class="selectedId_span" style="display:none" >
+	20 <input class="c_select" type="checkbox" name="selectedId[]" value="6957151">
+	</span>
+
+	
+	www.whport.com.cn	
+	<div class='c_siteTitle'>- 威海港集团有限公司</div>
+	</td>
+
+<!--
+<td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&任务分类">
+常规扫描</td>
+-->
+
+<td align="left" class="td1" style="text-align:center;width:130px;" title="创建任务的时间（计划启动时间）">
+2016-06-17 15:49</td>
+
+<td class="td1" style="padding-left:15px;padding-right:3px;width:175px;">
+<span id='t6957151' class=status>&nbsp;</span>
+</td>
+
+
+<td class="td2" style="">&nbsp;&nbsp;
+
+<a target=_blank href=report.php?id=6957151>扫描结果</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=new.php?id=6957151>重扫</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href='list.php?AITIME=1466871544&act=delete&selectedId[]=6957151' class=c_dellink style=display:none onclick="return realGo('你确定要删除吗?');"><font color=red>[删除]</font></a>
+</td></tr>
+</table>
+<!----结束表格----->
+
+
+
+
+
+
+<script>
+		function showToolbar()
+		{
+			if($('#id_showToolbar').attr('value')==" 显示工具 ")
+			{
+				$('#id_showToolbar').attr('value',' 隐藏工具 ');
+				$('.c_dellink').show();
+				
+				$('.selectedId_span').show();
+				$('.toolbar').slideDown();
+			}else 
+			{
+				$('#id_showToolbar').attr('value',' 显示工具 ');
+				$('.c_dellink').hide();
+				$('.selectedId_span').hide();
+				$('.toolbar').slideUp();
+			}
+
+		}
+</script>
+
+<!-- navnav -->
+<div id="navnav" style="padding-top:10px;background-color:#ffffff;">
+	<input id="id_act" type="hidden" value="delete"  name="act">
+	<div style="float:left;width:35%;text-align:left">
+	
+		<input type="button" id="id_showToolbar" value=" 显示工具 " onclick="showToolbar();">&nbsp;&nbsp;
+			<input class="toolbar" style="display:none" type="button" value=" 全选 " onclick="$('.c_select').attr('checked',true);">&nbsp;&nbsp;
+			<input class="toolbar" style="display:none" type="button" value=" 反选 "
+			onclick="$('.c_select').each(function(){this.checked=!this.checked;});">&nbsp;&nbsp;
+			<input class="toolbar" style="display:none" type="button" value=" 重扫选中 " onclick="doRescanAll();">&nbsp;&nbsp;
+			<input class="toolbar" style="display:none" type="button" value=" 取消扫描 " onclick="doCancelAll();">&nbsp;&nbsp;
+
+							<input class="toolbar" style="display:none" type="button" value=" 删除所选 " onclick="doDeleteAll();">&nbsp;&nbsp;
+			
+			<input class="toolbar" style="display:none" type="button" value=" 查看正在扫描 " onclick="document.location='list.php?filter=running'">
+			
+	</div>
+	</form>
+	<div style="float:left;">
+		<form method="get"  action="?">
+			<input type="hidden" name="batchid" value="6957134">
+			<input type="hidden" name="taskfrom" value="0">
+			域名关键字：<input type="text" name="searchkey" size="20">&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value=" 搜索 " name="B1">
+		</form>
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+
+
+<div id="pageinfo" style="text-align:center;padding-top:20px;background-color:#ffffff;"><a href="?p=1&batchid=6957134&taskfrom=0&searchkey=">上一页</a>&nbsp;&nbsp;<a href="?p=1&batchid=6957134&taskfrom=0&searchkey=">[1]</a>&nbsp;2&nbsp;<a href="?p=3&batchid=6957134&taskfrom=0&searchkey=">[3]</a>&nbsp;&nbsp;&nbsp;<a href="?p=3&batchid=6957134&taskfrom=0&searchkey=">下一页</a></div>
+
+<script>
+function doDeleteAll()
+{
+	if (confirm("确定删除这些任务记录？\n注意:\n1. 未完成的任务将被终止\n2. 删除扫描记录可能不利于您做风险统计")) {
+		$("#id_act").attr("value","delete");
+		document.mainForm.submit();
+	}
+}
+function doCancelAll()
+{
+	if (confirm("确定取消这些任务？")) {
+		$("#id_act").attr("value","cancel");
+		document.mainForm.submit();
+	}
+}
+function doRescanAll()
+{
+	var id="";
+	$('.c_select').each(function(){
+		if (this.checked)
+		{
+			id+=this.value+",";
+		}
+	});
+
+	document.location="new.php?id="+id;
+}
+
+function control(str,m) {
+	if (confirm(m)) {
+		$.get("control.php?"+str+"&t="+Math.random(), null, 
+		function (data, textStatus){
+				if(data=="ok")
+				{
+					if(document.location.href.indexOf("list.php")>0){
+						document.location="list.php?batchid=6957134";
+					}
+					else {
+						window.location.reload();
+					}
+				}
+				else 
+				{
+					alert("操作失败:"+data);
+				}
+			}
+		);
+
+	}
+}
+function resetStatus(tasksJsonStatus)
+{
+	for(var a in tasksJsonStatus)
+	{
+		var el = document.getElementById("t"+a);
+		if(!el)  {
+			//alert("任务列表已更新");
+			location.reload();
+			return;
+		}
+		if(el.innerHTML!=tasksJsonStatus[a])
+		{
+			el.innerHTML = tasksJsonStatus[a];
+		}
+	}
+}
+lastData="";
+function updateStatus()
+{
+		$.get("status.php?searchkey=&p=2&filter=&batchid=6957134&taskfrom=0&AITIME=1466871544&t="+Math.random(), null, 
+		function (data, textStatus){
+			if(textStatus=="success")
+			{
+				if(data!=lastData && data!="") {
+					lastData = data;
+					eval(data);
+				}
+			}
+		}
+	);
+}
+resetStatus({"6957170":"  \u5b89\u5168","6957169":"  \u5b89\u5168\uff0816\u4e2a\u63d0\u793a\uff09","6957168":"  \u5b89\u5168\uff089\u4e2a\u63d0\u793a\uff09","6957167":"  \u5b89\u5168\uff081\u4e2a\u63d0\u793a\uff09","6957166":" <img border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'> 6\u4e2a\u6f0f\u6d1e\uff082\u4e2a\u63d0\u793a\uff09","6957165":" <img border=0 title='\u9ad8\u5371' src='files\/msg_high.png'> 4\u4e2a\u6f0f\u6d1e\uff082\u4e2a\u63d0\u793a\uff09","6957164":"  \u5b89\u5168\uff081\u4e2a\u63d0\u793a\uff09","6957163":"  \u5b89\u5168","6957162":" <img border=0 title='\u9ad8\u5371' src='files\/msg_high.png'> 1\u4e2a\u6f0f\u6d1e\uff088\u4e2a\u63d0\u793a\uff09","6957161":"  \u5b89\u5168","6957160":" <img border=0 title='\u9ad8\u5371' src='files\/msg_high.png'> 4\u4e2a\u6f0f\u6d1e\uff0817\u4e2a\u63d0\u793a\uff09","6957159":"  1\u4e2a\u6f0f\u6d1e\uff081\u4e2a\u63d0\u793a\uff09","6957158":"  \u5b89\u5168","6957157":"  \u5b89\u5168","6957156":"  \u5b89\u5168","6957155":"  \u5b89\u5168","6957154":" <img border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'> 2\u4e2a\u6f0f\u6d1e\uff0821\u4e2a\u63d0\u793a\uff09","6957153":"  \u5b89\u5168\uff085\u4e2a\u63d0\u793a\uff09","6957152":"  \u5b89\u5168","6957151":" <img border=0 title='\u9ad8\u5371' src='files\/msg_high.png'> 31\u4e2a\u6f0f\u6d1e\uff0810\u4e2a\u63d0\u793a\uff09"});
+setInterval('updateStatus();', 10*1000);
+</script>
+
+<script>
+if( screen.width <=1024){
+	$(".width_class").css("width","220px");
+}
+</script>		</div>
+</td></tr></table>
+
+
+
+
+﻿<style>
+.c_AIMap{border-style:solid;border-width:3pt; border-color:#cfcfcf;display:block;position: absolute;width:590px;z-index:1000;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+</style>
+<script>
+function showAbout(){
+	$('#id_about').css('visibility','visible');
+	$('#id_about').show();
+	$('#id_about').css('left','130px');
+	return false;
+}
+</script>
+
+<div id="id_about" class=c_AIMap style="width:80%;background:#f5f5f5;top:45px;display:none;">
+		<div id="maphead" style="height:28px;line-height:28px;background:#cfcfcf;text-align:right">
+			<a href="#" onclick="$('#id_about').hide();return false;" style="color:#000;"><b>关闭</b></a>&nbsp;&nbsp;
+		</div>
+   		<div id="id_about_content" style="text-align:center">
+<img src=files/about.png border=0 width=90% style='padding:11px;'>		
+</div>
+	</div> 
+
+
+<div class="ft">
+	<div class="wrap">
+		<p class="friend">
+			
+		</p>
+<p>	
+Copyright ©2011-2016 安全检测系统  (Version:3.0 Build:20151214)</p>
+		 
+		<font color=#555>2016-06-26 01:22:18</font>
+
+	</div>
+</div>
+<br>
+
+
+
+
+<!---------- map ---------------->
+
+	<div id="id_AIMap" class=c_AIMap style="left:230px;background:#f5f5f5;top:45px;visibility:hidden">
+		<div id="maphead" style="height:28px;line-height:28px;background:#cfcfcf;text-align:right">
+			<a href="#" onclick="showMap();return false;" style="color:#000;">关闭</a>&nbsp;&nbsp;
+		</div>
+   		<div id="AIChinaMap" style="text-align:center"></div>
+	</div> 
+ 
+
+<script>
+function hoverMap(area){
+	document.location="?taskfromname="+area['name'];
+}
+
+
+function showMap(){
+	if($('#id_AIMap').css('display')=='none' || $('#id_AIMap').css('visibility')=="hidden"){
+		$('#id_AIMap').css('visibility',"visible");
+		$('#id_AIMap').show();
+	}else{
+		$('#id_AIMap').hide();
+	}
+}
+//showMap();
+AIMapDatas=[];
+function getSplitIndex(chooseSum,sum,index){
+	var each=Math.ceil(sum/chooseSum);
+	return Math.ceil((index+1)/each)-1;
+}
+function getAIMapColor(area){
+	if(AIMapDatas.length==0) return Raphael.getColor(0.9);
+
+	//var colors=['#EA0000','#FF4500','#FF9224'];
+	var colors=['#FF0000','#FF4500','orange'/*,'#16ce44'*/];
+	var i;
+	for(i=0;i<AIMapDatas.length;i++ ){
+		if(area==AIMapDatas[i][0]){
+			break;
+		}
+	}
+	return colors[getSplitIndex(colors.length,AIMapDatas.length,i)];
+}
+</script>
+
+<script type="text/javascript" src="template_dir/1/{$files$}/raphael-min.js"></script>
+<script type="text/javascript" src="template_dir/1/{$files$}/chinamap.js"></script>
+
