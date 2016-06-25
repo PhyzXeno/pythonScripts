@@ -2,10 +2,10 @@
 # coding=utf-8
 import re
 
-file=open('/root/Desktop/yes.html','r')
+file=open('./raw.html','r')
 buf=file.readlines()
 stg=str(buf)
-file2=open('/root/Desktop/list','w+')
+file2=open('./rawList.txt','w+')
 
 r=r'"http://download.*?"'
 #r=r'\w{3}'
