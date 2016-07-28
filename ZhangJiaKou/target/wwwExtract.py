@@ -8,7 +8,7 @@ for time in range(1,4):
     name=time_str + '.txt'
     file=open(name,'r',encoding='utf-8')
     for line in file:
-        if "www" in line:
+        if "zjk" in line:
             file2.write(line)
         else:
             pass
