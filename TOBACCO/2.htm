@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>http://www.aisec.com/aiscanner/list.php?p=2&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=</title><link rel="stylesheet" type="text/css" href="2_files/viewsource.css"></head><body contextmenu="actions" id="viewsource" class="highlight" style="-moz-tab-size: 4"><pre id="line1"><span>
+<span id="line2"></span>
+<span id="line3"></span>
+<span id="line4"></span>
+<span id="line5"></span></span><span title="尚未定义 Doctype 就出现了起始标签。预期应有“&lt;!DOCTYPE html&gt;”。" class="error">&lt;<span class="start-tag">meta</span> <span class="attribute-name">http-equiv</span>="<a class="attribute-value">content-type</a>" <span class="attribute-name">content</span>="<a class="attribute-value">text/html; charset=utf-8</a>"&gt;</span><span>
+<span id="line6"></span></span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">HTTP-EQUIV</span>="<a class="attribute-value">Cache-control</a>" <span class="attribute-name">CONTENT</span>="<a class="attribute-value">no-cache</a>"&gt;</span><span>  
+<span id="line7"></span></span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>安全检测系统</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line8"></span></span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">shortcut icon</a>" <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/favicon.ico?v=1" class="attribute-value">template_dir/1/{$files$}/favicon.ico?v=1</a>" <span>/</span>&gt;</span><span>
+<span id="line9"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/DatePicker/WdatePicker.js" class="attribute-value">template_dir/1/{$files$}/DatePicker/WdatePicker.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line10"></span>
+<span id="line11"></span></span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/css.css?v=211" class="attribute-value">template_dir/1/{$files$}/css.css?v=211</a>" <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span>/</span>&gt;</span><span>
+<span id="line12"></span></span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/my.css?v=211" class="attribute-value">template_dir/1/{$files$}/my.css?v=211</a>" <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span>/</span>&gt;</span><span>
+<span id="line13"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>='<a class="attribute-value">text/javascript</a>' <span class="attribute-name">src</span>='<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/jquery.min.js" class="attribute-value">template_dir/1/{$files$}/jquery.min.js</a>'&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line14"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/jquery.corner.js" class="attribute-value">template_dir/1/{$files$}/jquery.corner.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line15"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/jquery.qtip-1.0.0-rc3.min.js" class="attribute-value">template_dir/1/{$files$}/jquery.qtip-1.0.0-rc3.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line16"></span>
+<span id="line17"></span></span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line18"></span>.listTable {
+<span id="line19"></span>	width:96%;
+<span id="line20"></span>}
+<span id="line21"></span>.wrap {
+<span id="line22"></span>	width:95%;
+<span id="line23"></span>}
+<span id="line24"></span>.hd .nav{
+<span id="line25"></span>	width:100%;
+<span id="line26"></span>}
+<span id="line27"></span></span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line28"></span>
+<span id="line29"></span>
+<span id="line30"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line31"></span>window.onerror=function(){return true};
+<span id="line32"></span>function initTips(className)
+<span id="line33"></span>{
+<span id="line34"></span>	jQuery('.' + className).each(function(){
+<span id="line35"></span>		jQuery(this).qtip({
+<span id="line36"></span>			content:jQuery(this).attr('rel'),
+<span id="line37"></span>			position: {
+<span id="line38"></span>				corner: {
+<span id="line39"></span>					target: 'rightMiddle',
+<span id="line40"></span>					tooltip: 'leftMiddle'
+<span id="line41"></span>				}
+<span id="line42"></span>			},
+<span id="line43"></span>			style: {
+<span id="line44"></span>				 name: 'blue',
+<span id="line45"></span>				 padding: '7px 13px',
+<span id="line46"></span>				 width: {
+<span id="line47"></span>					max: 310,
+<span id="line48"></span>					min: 300
+<span id="line49"></span>				 },
+<span id="line50"></span>				 tip: true
+<span id="line51"></span>			},
+<span id="line52"></span>			show: {
+<span id="line53"></span>				solo: true,
+<span id="line54"></span>				when: 'mouseover'
+<span id="line55"></span>			}
+<span id="line56"></span>		});
+<span id="line57"></span>	});
+<span id="line58"></span>}
+<span id="line59"></span>$(function() {
+<span id="line60"></span>	initTips('text_tips1');
+<span id="line61"></span>});
+<span id="line62"></span>
+<span id="line63"></span>function realGo(message) {
+<span id="line64"></span>	if (confirm(message)) {
+<span id="line65"></span>		return true;
+<span id="line66"></span>	}
+<span id="line67"></span>	return false;
+<span id="line68"></span>}
+<span id="line69"></span>
+<span id="line70"></span>function showHide(div,obj){
+<span id="line71"></span>	var div=$(div);
+<span id="line72"></span>	if(div.css('display')=='none'){
+<span id="line73"></span>		div.slideDown();
+<span id="line74"></span>	}else{
+<span id="line75"></span>		div.slideUp();
+<span id="line76"></span>	}
+<span id="line77"></span>	return false;
+<span id="line78"></span>}
+<span id="line79"></span>
+<span id="line80"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line81"></span>
+<span id="line82"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">hd</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line83"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">wrap</a>"&gt;</span><span>
+<span id="line84"></span>	  </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">logo</a>" <span class="attribute-name">style</span>=<a class="attribute-value">padding-top:12px</a>&gt;</span><span>
+<span id="line85"></span>		</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/" class="attribute-value">/</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>=<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/logo15.png" class="attribute-value">template_dir/1/{$files$}/logo15.png</a> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">width</span>=<a class="attribute-value">120/</a>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>	  </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line86"></span>        
+<span id="line87"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">link</a>"&gt;</span><span>
+<span id="line88"></span>
+<span id="line89"></span>				
+<span id="line90"></span>				</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/user.php" class="attribute-value">user.php</a>" <span class="attribute-name">title</span>="<a class="attribute-value">扫描次数:989次</a>"&gt;</span><span>您好: 企业用户 beiyoutest</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line91"></span>
+<span id="line92"></span>		<span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>
+<span id="line93"></span>				</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span>
+<span id="line94"></span>		
+<span id="line95"></span>		 | 
+<span id="line96"></span>		</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/about.php" class="attribute-value">about.php</a>" <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return showAbout();</a>"&gt;</span><span>关于</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line97"></span>
+<span id="line98"></span>		 | </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/login.php?act=logout&amp;lock=1&amp;username=beiyoutest&amp;t=1471437632" class="attribute-value">login.php?act=logout<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>lo</span>ck=1<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>us</span>ername=beiyoutest<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>t</span>=1471437632</a>"&gt;</span><span>锁屏</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line99"></span>		  | </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/login.php?act=logout&amp;t=1471437632" class="attribute-value">login.php?act=logout<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>t</span>=1471437632</a>"&gt;</span><span>退出</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line100"></span>		
+<span id="line101"></span>		</span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line102"></span>
+<span id="line103"></span>
+<span id="line104"></span>
+<span id="line105"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line106"></span>        
+<span id="line107"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">nav</a>"&gt;</span><span>
+<span id="line108"></span>			</span><span>&lt;<span class="start-tag">ul</span> <span class="attribute-name">class</span>="<a class="attribute-value">menu</a>"&gt;</span><span>
+<span id="line109"></span>
+<span id="line110"></span>			  </span><span>&lt;<span class="start-tag">li</span> &gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/new.php?t=1471437632" class="attribute-value">new.php?t=1471437632</a>"&gt;</span><span>添加任务</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line111"></span>					</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line112"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/new.php" class="attribute-value">new.php</a>"&gt;</span><span>添加任务</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line113"></span>
+<span id="line114"></span>												</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/new.netflow.php" class="attribute-value">new.netflow.php</a>"&gt;</span><span>导入Url列表</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line115"></span>						
+<span id="line116"></span>					</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line117"></span>			  </span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line118"></span>                
+<span id="line119"></span>                </span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">class</span>=<a class="attribute-value">selected</a>&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?t=1471437632" class="attribute-value">list.php?t=1471437632</a>"&gt;</span><span>任务管理</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line120"></span>					</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line121"></span>
+<span id="line122"></span>
+<span id="line123"></span>					</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>
+<span id="line124"></span>					</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">style</span>='<a class="attribute-value">color:#000;font-weight:bold</a>' <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/list.php" class="attribute-value">list.php</a>&gt;</span><span>任务管理</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line125"></span>
+<span id="line126"></span>					</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>
+<span id="line127"></span>					</span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/all.php" class="attribute-value">all.php</a>&gt;</span><span>风险统计</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line128"></span>
+<span id="line129"></span>										</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>
+<span id="line130"></span>					</span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/list.php?taskfrom=1" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">list.php?taskfrom=1</a>&gt;</span><span>API任务列表</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line131"></span>					
+<span id="line132"></span>					</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line133"></span>				</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line134"></span>			
+<span id="line135"></span>				
+<span id="line136"></span>					</span><span>&lt;<span class="start-tag">li</span> &gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/v.index.php?t=1471437632" class="attribute-value">v.index.php?t=1471437632</a>"&gt;</span><span>检测工具</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line137"></span>						</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line138"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>
+<span id="line139"></span>						</span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/v.list.php" class="attribute-value">v.list.php</a>&gt;</span><span>可用性及平稳度监测</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line140"></span>
+<span id="line141"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>
+<span id="line142"></span>						</span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/v.info.php" class="attribute-value">v.info.php</a>&gt;</span><span>信息收集</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line143"></span>
+<span id="line144"></span>						</span><span>&lt;<span class="start-tag">li</span>&gt;</span><span>
+<span id="line145"></span>						</span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/v.tools.php" class="attribute-value">v.tools.php</a>&gt;</span><span>漏洞验证工具箱</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line146"></span>
+<span id="line147"></span>						</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line148"></span>
+<span id="line149"></span>					</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line150"></span>
+<span id="line151"></span>					</span><span>&lt;<span class="start-tag">li</span> &gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/center_global.php?t=1471437632" class="attribute-value">center_global.php?t=1471437632</a>"&gt;</span><span>数据中心</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line152"></span>					</span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line153"></span>
+<span id="line154"></span>									
+<span id="line155"></span>				
+<span id="line156"></span>
+<span id="line157"></span>			</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line158"></span>			</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">help</a>"&gt;</span><span>
+<span id="line159"></span>
+<span id="line160"></span>									</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/hosts.php?t=1471437632" class="attribute-value">hosts.php?t=1471437632</a>"&gt;</span><span>系统授权</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line161"></span>				
+<span id="line162"></span>				</span><span>&lt;<span class="start-tag">a</span>  <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/user.php?t=1471437632" class="attribute-value">user.php?t=1471437632</a>"&gt;</span><span>用户中心</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line163"></span>				
+<span id="line164"></span>							
+<span id="line165"></span>			</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line166"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line167"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line168"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line169"></span>
+<span id="line170"></span>
+<span id="line171"></span></span><span>&lt;<span class="start-tag">center</span>&gt;</span><span>
+<span id="line172"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>='<a class="attribute-value">msg</a>'&gt;</span><span></span><span>&lt;<span class="start-tag">b</span>&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">style</span>="<a class="attribute-value">font-size:15px;</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">b</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line173"></span>
+<span id="line174"></span></span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line175"></span>.aside{width:210px; 
+float:left;background-color:#FBFBFB; border:#D5D5D5 solid 1px; 
+overflow:hidden; margin-bottom:10px; zoom:1;padding-bottom:3px}
+<span id="line176"></span>.aside li {
+<span id="line177"></span>	cursor:pointer;
+<span id="line178"></span>	padding-left:12px;
+<span id="line179"></span>    height: 32px;
+<span id="line180"></span>    line-height: 32px;
+<span id="line181"></span>    margin-bottom: 1px;
+<span id="line182"></span>}
+<span id="line183"></span>.aside ul {
+<span id="line184"></span>	padding-bottom: 8px;
+<span id="line185"></span>}
+<span id="line186"></span>.aside .currentA{font-weight: bold;background: url(template_dir/1/{$files$}/menu_li_cur.png) repeat-y scroll 0 0 #E5E9ED;}
+<span id="line187"></span></span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line188"></span>
+<span id="line189"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line190"></span>$(document).ready(function() {
+<span id="line191"></span>$(".aside li").mouseover(function(){
+<span id="line192"></span>	if ($(this).attr("class")!="currentA") $(this).css("background-color", "#eaF0F3");
+<span id="line193"></span>	}).mouseout(function(){
+<span id="line194"></span>	if ($(this).attr("class")!="currentA") $(this).css("background-color", "#FBFBFB");
+<span id="line195"></span>});
+<span id="line196"></span>});
+<span id="line197"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line198"></span></span><span>&lt;<span class="start-tag">table</span> <span class="attribute-name">width</span>=<a class="attribute-value">96%</a>&gt;</span><span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">valign</span>="<a class="attribute-value">top</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding:0px;width:210px</a>"&gt;</span><span>
+<span id="line199"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">aside</a>"&gt;</span><span>
+<span id="line200"></span>		</span><span>&lt;<span class="start-tag">h4</span> <span class="attribute-name">class</span>="<a class="attribute-value">asideHead</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-bottom:3px</a>"&gt;</span><span>
+<span id="line201"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">float:left;</a>"&gt;</span><span>任务分类</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line202"></span>		
+<span id="line203"></span>				</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">float:right;</a>"&gt;</span><span>
+<span id="line204"></span>		</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=2&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=#" class="attribute-value">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">showMap();return false;</a>"&gt;</span><span>地图</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line205"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line206"></span>
+<span id="line207"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">float:right;padding-top:10px</a>"&gt;</span><span>
+<span id="line208"></span>		</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=2&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=#" class="attribute-value">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">showMap();return false;</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>=<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/silky/magnifier.png" class="attribute-value">template_dir/1/{$files$}/silky/magnifier.png</a>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line209"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line210"></span>		
+<span id="line211"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">clear:both;</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line212"></span>		
+<span id="line213"></span>		</span><span>&lt;/<span class="end-tag">h4</span>&gt;</span><span>
+<span id="line214"></span>		</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line215"></span>					</span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">onclick</span>='<a class="attribute-value">document.location=this.childNodes[0].href;</a>' <span class="attribute-name">class</span>='<a class="attribute-value">currentA</a>' &gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?taskfrom=0" class="attribute-value">list.php?taskfrom=0</a>"&gt;</span><span>常规任务</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line216"></span>		</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line217"></span>
+<span id="line218"></span>
+<span id="line219"></span>		</span><span>&lt;<span class="start-tag">h4</span> <span class="attribute-name">class</span>="<a class="attribute-value">asideHead</a>" <span class="attribute-name">style</span>="<a class="attribute-value">border-top:#D5D5D5 solid 1px;padding-bottom:3px</a>"&gt;</span><span>其他</span><span>&lt;/<span class="end-tag">h4</span>&gt;</span><span>
+<span id="line220"></span>		</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line221"></span>		  </span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">onclick</span>='<a class="attribute-value">document.location=this.childNodes[0].href;</a>'&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/all.php" class="attribute-value">all.php</a>&gt;</span><span>风险统计</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line222"></span>		  </span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">onclick</span>='<a class="attribute-value">document.location=this.childNodes[0].href;</a>' &gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/plan.php" class="attribute-value">plan.php</a>&gt;</span><span>周期扫描计划</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line223"></span>		  </span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">onclick</span>='<a class="attribute-value">document.location=this.childNodes[0].href;</a>' &gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/taskfrom.php" class="attribute-value">taskfrom.php</a>&gt;</span><span>任务分类设置</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line224"></span>		</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line225"></span>
+<span id="line226"></span>		</span><span>&lt;<span class="start-tag">h4</span> <span class="attribute-name">class</span>="<a class="attribute-value">asideHead</a>" <span class="attribute-name">style</span>="<a class="attribute-value">border-top:#D5D5D5 solid 1px;padding-bottom:3px</a>"&gt;</span><span>参考</span><span>&lt;/<span class="end-tag">h4</span>&gt;</span><span>
+<span id="line227"></span>		</span><span>&lt;<span class="start-tag">ul</span>&gt;</span><span>
+<span id="line228"></span>		  </span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">onclick</span>="<a class="attribute-value">window.open('../secinfo/')</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span>&gt;</span><span>安全知识库</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line229"></span>		</span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line230"></span>		
+<span id="line231"></span>		
+<span id="line232"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line233"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">style</span>="<a class="attribute-value">padding:3px;</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">valign</span>="<a class="attribute-value">top</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding:0px;</a>"&gt;</span><span>
+<span id="line234"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>=<a class="attribute-value">background-color:#6189B0;</a>&gt;</span><span>
+<span id="line235"></span>		</span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line236"></span>.c_siteTitle{padding-top:5px;color:#333;font-size:13px}
+<span id="line237"></span>.c_nextLine{padding-top:5px;}
+<span id="line238"></span>
+<span id="line239"></span></span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line240"></span></span><span>&lt;<span class="start-tag">form</span> <span class="attribute-name">method</span>="<a class="attribute-value">post</a>" <span class="attribute-name">name</span>="<a class="attribute-value">mainForm</a>" <span class="attribute-name">action</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?" class="attribute-value">?</a>"&gt;</span><span>
+<span id="line241"></span></span><span>&lt;<span class="start-tag">input</span>  <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">name</span>="<a class="attribute-value">AITIME</a>" <span class="attribute-name">value</span>="<a class="attribute-value">1471437580</a>" <span class="attribute-name">size</span>=<a class="attribute-value">10</a>&gt;</span><span>
+<span id="line242"></span></span><span>&lt;<span class="start-tag">table</span> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">cellspacing</span>=<a class="attribute-value">1</a> <span class="attribute-name">cellpadding</span>="<a class="attribute-value">4</a>" <span class="attribute-name">width</span>="<a class="attribute-value">100%</a>"&gt;</span><span>
+<span id="line243"></span>	</span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line244"></span>    </span><span>&lt;<span class="start-tag">td</span>  <span class="attribute-name">colspan</span>="<a class="attribute-value">5</a>" <span class="attribute-name">class</span>="<a class="attribute-value">asideHead</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line245"></span>		
+<span id="line246"></span>	当前位置：</span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">#333</a>&gt;</span><span> www.hebeizy.com.cn </span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span>等48个任务 </span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">style</span>='<a class="attribute-value">font-size:13px;</a>' <span class="attribute-name">color</span>='<a class="attribute-value">red</a>'&gt;</span><span>(7个高危，17个中危网站)</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/all.php?batchid=7115172" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">all.php?batchid=7115172</a>&gt;</span><span>风险统计</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line247"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line248"></span>
+<span id="line249"></span>  </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line250"></span>
+<span id="line251"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line252"></span>
+<span id="line253"></span>
+<span id="line254"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line255"></span>
+<span id="line256"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line257"></span>	1 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115199</a>"&gt;</span><span>
+<span id="line258"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line259"></span>
+<span id="line260"></span>	
+<span id="line261"></span>	www.hebeizy.com.cn	
+<span id="line262"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 河北中烟工业有限责任公司</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line263"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line264"></span>
+<span id="line265"></span></span><span class="comment">&lt;!--
+<span id="line266"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line267"></span>常规扫描&lt;/td&gt;
+<span id="line268"></span>--&gt;</span><span>
+<span id="line269"></span>
+<span id="line270"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line271"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line272"></span>
+<span id="line273"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line274"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115199</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line275"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line276"></span>
+<span id="line277"></span>
+<span id="line278"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line279"></span>
+<span id="line280"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115199" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115199</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115199" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115199</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115199" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115199</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line281"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line282"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line283"></span>
+<span id="line284"></span>
+<span id="line285"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line286"></span>
+<span id="line287"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line288"></span>	2 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115198</a>"&gt;</span><span>
+<span id="line289"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line290"></span>
+<span id="line291"></span>	
+<span id="line292"></span>	www.nx-tobacco.com.cn	
+<span id="line293"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 宁夏回族自治区烟草专卖局（公司）</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line294"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line295"></span>
+<span id="line296"></span></span><span class="comment">&lt;!--
+<span id="line297"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line298"></span>常规扫描&lt;/td&gt;
+<span id="line299"></span>--&gt;</span><span>
+<span id="line300"></span>
+<span id="line301"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line302"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line303"></span>
+<span id="line304"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line305"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115198</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line306"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line307"></span>
+<span id="line308"></span>
+<span id="line309"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line310"></span>
+<span id="line311"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115198" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115198</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115198" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115198</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115198" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115198</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line312"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line313"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line314"></span>
+<span id="line315"></span>
+<span id="line316"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line317"></span>
+<span id="line318"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line319"></span>	3 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115197</a>"&gt;</span><span>
+<span id="line320"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line321"></span>
+<span id="line322"></span>	
+<span id="line323"></span>	qh.tobacco.com.cn	
+<span id="line324"></span>	
+<span id="line325"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line326"></span>
+<span id="line327"></span></span><span class="comment">&lt;!--
+<span id="line328"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line329"></span>常规扫描&lt;/td&gt;
+<span id="line330"></span>--&gt;</span><span>
+<span id="line331"></span>
+<span id="line332"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line333"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line334"></span>
+<span id="line335"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line336"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115197</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line337"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line338"></span>
+<span id="line339"></span>
+<span id="line340"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line341"></span>
+<span id="line342"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115197" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115197</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115197" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115197</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115197" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115197</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line343"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line344"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line345"></span>
+<span id="line346"></span>
+<span id="line347"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line348"></span>
+<span id="line349"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line350"></span>	4 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115196</a>"&gt;</span><span>
+<span id="line351"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line352"></span>
+<span id="line353"></span>	
+<span id="line354"></span>	www.gs.tobacco.com.cn	
+<span id="line355"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 甘肃省烟草专卖局(公司)</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line356"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line357"></span>
+<span id="line358"></span></span><span class="comment">&lt;!--
+<span id="line359"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line360"></span>常规扫描&lt;/td&gt;
+<span id="line361"></span>--&gt;</span><span>
+<span id="line362"></span>
+<span id="line363"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line364"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line365"></span>
+<span id="line366"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line367"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115196</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line368"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line369"></span>
+<span id="line370"></span>
+<span id="line371"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line372"></span>
+<span id="line373"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115196" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115196</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115196" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115196</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115196" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115196</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line374"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line375"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line376"></span>
+<span id="line377"></span>
+<span id="line378"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line379"></span>
+<span id="line380"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line381"></span>	5 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115195</a>"&gt;</span><span>
+<span id="line382"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line383"></span>
+<span id="line384"></span>	
+<span id="line385"></span>	www.snyc.com.cn	
+<span id="line386"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 首页 - 陕西省烟草专卖局(公司) - ...</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line387"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line388"></span>
+<span id="line389"></span></span><span class="comment">&lt;!--
+<span id="line390"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line391"></span>常规扫描&lt;/td&gt;
+<span id="line392"></span>--&gt;</span><span>
+<span id="line393"></span>
+<span id="line394"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line395"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line396"></span>
+<span id="line397"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line398"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115195</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line399"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line400"></span>
+<span id="line401"></span>
+<span id="line402"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line403"></span>
+<span id="line404"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115195" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115195</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115195" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115195</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115195" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115195</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line405"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line406"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line407"></span>
+<span id="line408"></span>
+<span id="line409"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line410"></span>
+<span id="line411"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line412"></span>	6 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115194</a>"&gt;</span><span>
+<span id="line413"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line414"></span>
+<span id="line415"></span>	
+<span id="line416"></span>	www.yn-tobacco.com	
+<span id="line417"></span>	
+<span id="line418"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line419"></span>
+<span id="line420"></span></span><span class="comment">&lt;!--
+<span id="line421"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line422"></span>常规扫描&lt;/td&gt;
+<span id="line423"></span>--&gt;</span><span>
+<span id="line424"></span>
+<span id="line425"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line426"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line427"></span>
+<span id="line428"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line429"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115194</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line430"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line431"></span>
+<span id="line432"></span>
+<span id="line433"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line434"></span>
+<span id="line435"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115194" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115194</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115194" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115194</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115194" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115194</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line436"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line437"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line438"></span>
+<span id="line439"></span>
+<span id="line440"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line441"></span>
+<span id="line442"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line443"></span>	7 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115193</a>"&gt;</span><span>
+<span id="line444"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line445"></span>
+<span id="line446"></span>	
+<span id="line447"></span>	sc.tobacco.com.cn	
+<span id="line448"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 四川省烟草专卖局 -- 首页</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line449"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line450"></span>
+<span id="line451"></span></span><span class="comment">&lt;!--
+<span id="line452"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line453"></span>常规扫描&lt;/td&gt;
+<span id="line454"></span>--&gt;</span><span>
+<span id="line455"></span>
+<span id="line456"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line457"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line458"></span>
+<span id="line459"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line460"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115193</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line461"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line462"></span>
+<span id="line463"></span>
+<span id="line464"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line465"></span>
+<span id="line466"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115193" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115193</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115193" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115193</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115193" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115193</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line467"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line468"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line469"></span>
+<span id="line470"></span>
+<span id="line471"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line472"></span>
+<span id="line473"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line474"></span>	8 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115192</a>"&gt;</span><span>
+<span id="line475"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line476"></span>
+<span id="line477"></span>	
+<span id="line478"></span>	www.966599.com	
+<span id="line479"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 重庆烟草</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line480"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line481"></span>
+<span id="line482"></span></span><span class="comment">&lt;!--
+<span id="line483"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line484"></span>常规扫描&lt;/td&gt;
+<span id="line485"></span>--&gt;</span><span>
+<span id="line486"></span>
+<span id="line487"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line488"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line489"></span>
+<span id="line490"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line491"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115192</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line492"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line493"></span>
+<span id="line494"></span>
+<span id="line495"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line496"></span>
+<span id="line497"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115192" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115192</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115192" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115192</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115192" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115192</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line498"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line499"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line500"></span>
+<span id="line501"></span>
+<span id="line502"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line503"></span>
+<span id="line504"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line505"></span>	9 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115191</a>"&gt;</span><span>
+<span id="line506"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line507"></span>
+<span id="line508"></span>	
+<span id="line509"></span>	sz.tobacco.com.cn	
+<span id="line510"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 深圳市烟草专卖局(公司)</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line511"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line512"></span>
+<span id="line513"></span></span><span class="comment">&lt;!--
+<span id="line514"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line515"></span>常规扫描&lt;/td&gt;
+<span id="line516"></span>--&gt;</span><span>
+<span id="line517"></span>
+<span id="line518"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line519"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line520"></span>
+<span id="line521"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line522"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115191</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line523"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line524"></span>
+<span id="line525"></span>
+<span id="line526"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line527"></span>
+<span id="line528"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115191" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115191</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115191" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115191</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115191" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115191</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line529"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line530"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line531"></span>
+<span id="line532"></span>
+<span id="line533"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line534"></span>
+<span id="line535"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line536"></span>	10 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115190</a>"&gt;</span><span>
+<span id="line537"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line538"></span>
+<span id="line539"></span>	
+<span id="line540"></span>	hi.tobacco.com.cn	
+<span id="line541"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 海南省烟草专卖局-(中国烟草总公司海南省...</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line542"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line543"></span>
+<span id="line544"></span></span><span class="comment">&lt;!--
+<span id="line545"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line546"></span>常规扫描&lt;/td&gt;
+<span id="line547"></span>--&gt;</span><span>
+<span id="line548"></span>
+<span id="line549"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line550"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line551"></span>
+<span id="line552"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line553"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115190</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line554"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line555"></span>
+<span id="line556"></span>
+<span id="line557"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line558"></span>
+<span id="line559"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115190" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115190</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115190" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115190</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115190" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115190</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line560"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line561"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line562"></span>
+<span id="line563"></span>
+<span id="line564"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line565"></span>
+<span id="line566"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line567"></span>	11 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115189</a>"&gt;</span><span>
+<span id="line568"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line569"></span>
+<span id="line570"></span>	
+<span id="line571"></span>	gx.tobacco.com.cn	
+<span id="line572"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- My JSP \'index.jsp\'...</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line573"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line574"></span>
+<span id="line575"></span></span><span class="comment">&lt;!--
+<span id="line576"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line577"></span>常规扫描&lt;/td&gt;
+<span id="line578"></span>--&gt;</span><span>
+<span id="line579"></span>
+<span id="line580"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line581"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line582"></span>
+<span id="line583"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line584"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115189</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line585"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line586"></span>
+<span id="line587"></span>
+<span id="line588"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line589"></span>
+<span id="line590"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115189" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115189</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115189" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115189</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115189" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115189</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line591"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line592"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line593"></span>
+<span id="line594"></span>
+<span id="line595"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line596"></span>
+<span id="line597"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line598"></span>	12 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115188</a>"&gt;</span><span>
+<span id="line599"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line600"></span>
+<span id="line601"></span>	
+<span id="line602"></span>	www.gd.tobacco.gov.cn	
+<span id="line603"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- load...</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line604"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line605"></span>
+<span id="line606"></span></span><span class="comment">&lt;!--
+<span id="line607"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line608"></span>常规扫描&lt;/td&gt;
+<span id="line609"></span>--&gt;</span><span>
+<span id="line610"></span>
+<span id="line611"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line612"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line613"></span>
+<span id="line614"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line615"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115188</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line616"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line617"></span>
+<span id="line618"></span>
+<span id="line619"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line620"></span>
+<span id="line621"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115188" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115188</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115188" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115188</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115188" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115188</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line622"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line623"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line624"></span>
+<span id="line625"></span>
+<span id="line626"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line627"></span>
+<span id="line628"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line629"></span>	13 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115187</a>"&gt;</span><span>
+<span id="line630"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line631"></span>
+<span id="line632"></span>	
+<span id="line633"></span>	www.hntobacco.gov.cn	
+<span id="line634"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 湖南省烟草专卖局</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line635"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line636"></span>
+<span id="line637"></span></span><span class="comment">&lt;!--
+<span id="line638"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line639"></span>常规扫描&lt;/td&gt;
+<span id="line640"></span>--&gt;</span><span>
+<span id="line641"></span>
+<span id="line642"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line643"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line644"></span>
+<span id="line645"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line646"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115187</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line647"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line648"></span>
+<span id="line649"></span>
+<span id="line650"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line651"></span>
+<span id="line652"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115187" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115187</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115187" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115187</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115187" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115187</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line653"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line654"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line655"></span>
+<span id="line656"></span>
+<span id="line657"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line658"></span>
+<span id="line659"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line660"></span>	14 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115186</a>"&gt;</span><span>
+<span id="line661"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line662"></span>
+<span id="line663"></span>	
+<span id="line664"></span>	sd.tobacco.com.cn	
+<span id="line665"></span>	
+<span id="line666"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line667"></span>
+<span id="line668"></span></span><span class="comment">&lt;!--
+<span id="line669"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line670"></span>常规扫描&lt;/td&gt;
+<span id="line671"></span>--&gt;</span><span>
+<span id="line672"></span>
+<span id="line673"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line674"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line675"></span>
+<span id="line676"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line677"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115186</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line678"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line679"></span>
+<span id="line680"></span>
+<span id="line681"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line682"></span>
+<span id="line683"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115186" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115186</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115186" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115186</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115186" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115186</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line684"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line685"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line686"></span>
+<span id="line687"></span>
+<span id="line688"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line689"></span>
+<span id="line690"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line691"></span>	15 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115185</a>"&gt;</span><span>
+<span id="line692"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line693"></span>
+<span id="line694"></span>	
+<span id="line695"></span>	jx.tobacco.com.cn	
+<span id="line696"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 江西省烟草专卖局</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line697"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line698"></span>
+<span id="line699"></span></span><span class="comment">&lt;!--
+<span id="line700"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line701"></span>常规扫描&lt;/td&gt;
+<span id="line702"></span>--&gt;</span><span>
+<span id="line703"></span>
+<span id="line704"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line705"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line706"></span>
+<span id="line707"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line708"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115185</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line709"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line710"></span>
+<span id="line711"></span>
+<span id="line712"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line713"></span>
+<span id="line714"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115185" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115185</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115185" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115185</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115185" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115185</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line715"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line716"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line717"></span>
+<span id="line718"></span>
+<span id="line719"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line720"></span>
+<span id="line721"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line722"></span>	16 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115184</a>"&gt;</span><span>
+<span id="line723"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line724"></span>
+<span id="line725"></span>	
+<span id="line726"></span>	www.fjycw.com	
+<span id="line727"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 福建烟草网-官网</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line728"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line729"></span>
+<span id="line730"></span></span><span class="comment">&lt;!--
+<span id="line731"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line732"></span>常规扫描&lt;/td&gt;
+<span id="line733"></span>--&gt;</span><span>
+<span id="line734"></span>
+<span id="line735"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line736"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line737"></span>
+<span id="line738"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line739"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115184</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line740"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line741"></span>
+<span id="line742"></span>
+<span id="line743"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line744"></span>
+<span id="line745"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115184" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115184</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115184" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115184</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115184" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115184</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line746"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line747"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line748"></span>
+<span id="line749"></span>
+<span id="line750"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line751"></span>
+<span id="line752"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line753"></span>	17 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115183</a>"&gt;</span><span>
+<span id="line754"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line755"></span>
+<span id="line756"></span>	
+<span id="line757"></span>	ah.tobacco.com.cn	
+<span id="line758"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 安徽省烟草专卖局（公司）——首页</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line759"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line760"></span>
+<span id="line761"></span></span><span class="comment">&lt;!--
+<span id="line762"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line763"></span>常规扫描&lt;/td&gt;
+<span id="line764"></span>--&gt;</span><span>
+<span id="line765"></span>
+<span id="line766"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line767"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line768"></span>
+<span id="line769"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line770"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115183</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line771"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line772"></span>
+<span id="line773"></span>
+<span id="line774"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line775"></span>
+<span id="line776"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115183" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115183</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115183" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115183</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115183" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115183</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line777"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line778"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line779"></span>
+<span id="line780"></span>
+<span id="line781"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line782"></span>
+<span id="line783"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line784"></span>	18 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115182</a>"&gt;</span><span>
+<span id="line785"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line786"></span>
+<span id="line787"></span>	
+<span id="line788"></span>	www.zjyc.cn	
+<span id="line789"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- Test Page for Apache...</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line790"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line791"></span>
+<span id="line792"></span></span><span class="comment">&lt;!--
+<span id="line793"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line794"></span>常规扫描&lt;/td&gt;
+<span id="line795"></span>--&gt;</span><span>
+<span id="line796"></span>
+<span id="line797"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line798"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line799"></span>
+<span id="line800"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line801"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115182</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line802"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line803"></span>
+<span id="line804"></span>
+<span id="line805"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line806"></span>
+<span id="line807"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115182" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115182</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115182" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115182</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115182" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115182</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line808"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line809"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line810"></span>
+<span id="line811"></span>
+<span id="line812"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line813"></span>
+<span id="line814"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line815"></span>	19 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115181</a>"&gt;</span><span>
+<span id="line816"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line817"></span>
+<span id="line818"></span>	
+<span id="line819"></span>	222.66.55.21	
+<span id="line820"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 上海烟草集团有限责任公司-首页</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line821"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line822"></span>
+<span id="line823"></span></span><span class="comment">&lt;!--
+<span id="line824"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line825"></span>常规扫描&lt;/td&gt;
+<span id="line826"></span>--&gt;</span><span>
+<span id="line827"></span>
+<span id="line828"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line829"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line830"></span>
+<span id="line831"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line832"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115181</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line833"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line834"></span>
+<span id="line835"></span>
+<span id="line836"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line837"></span>
+<span id="line838"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115181" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115181</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115181" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115181</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115181" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115181</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line839"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line840"></span></span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line841"></span>
+<span id="line842"></span>
+<span id="line843"></span>	</span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1 width_class</a>" <span class="attribute-name">style</span>="<a class="attribute-value">width:320px;padding-left:15px;</a>"&gt;</span><span>
+<span id="line844"></span>
+<span id="line845"></span>	</span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">class</span>="<a class="attribute-value">selectedId_span</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" &gt;</span><span>
+<span id="line846"></span>	20 </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">c_select</a>" <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">selectedId[]</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115180</a>"&gt;</span><span>
+<span id="line847"></span>	</span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line848"></span>
+<span id="line849"></span>	
+<span id="line850"></span>	www.dltobacco.com	
+<span id="line851"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>='<a class="attribute-value">c_siteTitle</a>'&gt;</span><span>- 大连烟草外网</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line852"></span>	</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line853"></span>
+<span id="line854"></span></span><span class="comment">&lt;!--
+<span id="line855"></span>&lt;td align="left" class="td1" style="text-align:center;width:130px;" title="网站名称&amp;任务分类"&gt;
+<span id="line856"></span>常规扫描&lt;/td&gt;
+<span id="line857"></span>--&gt;</span><span>
+<span id="line858"></span>
+<span id="line859"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;width:130px;</a>" <span class="attribute-name">title</span>="<a class="attribute-value">创建任务的时间（计划启动时间）</a>"&gt;</span><span>
+<span id="line860"></span>2016-08-10 12:17</span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line861"></span>
+<span id="line862"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td1</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-left:15px;padding-right:3px;width:175px;</a>"&gt;</span><span>
+<span id="line863"></span></span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>='<a class="attribute-value">t7115180</a>' <span class="attribute-name">class</span>=<a class="attribute-value">status</a>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line864"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line865"></span>
+<span id="line866"></span>
+<span id="line867"></span></span><span>&lt;<span class="start-tag">td</span> <span class="attribute-name">class</span>="<a class="attribute-value">td2</a>" <span class="attribute-name">style</span>="<a class="attribute-value"></a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line868"></span>
+<span id="line869"></span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">target</span>=<a class="attribute-value">_blank</a> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/report.php?id=7115180" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">report.php?id=7115180</a>&gt;</span><span>扫描结果</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>=<a href="view-source:http://www.aisec.com/aiscanner/new.php?id=7115180" title="在一个没有被引号包起来的属性值当中出现了“=”。可能造成的原因: 属性值被放在一起，或是在当中放了 URL 查询字串。" class="attribute-value error">new.php?id=7115180</a>&gt;</span><span>重扫</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>='<a href="view-source:http://www.aisec.com/aiscanner/list.php?AITIME=1471437580&amp;act=delete&amp;selectedId[]=7115180" class="attribute-value">list.php?AITIME=1471437580<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ac</span>t=delete<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>se</span>lectedId[]=7115180</a>' <span class="attribute-name">class</span>=<a class="attribute-value">c_dellink</a> <span class="attribute-name">style</span>=<a class="attribute-value">display:none</a> <span class="attribute-name">onclick</span>="<a class="attribute-value">return realGo('你确定要删除吗?');</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">red</a>&gt;</span><span>[删除]</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line870"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line871"></span></span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line872"></span></span><span title="连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。" class="error error error error comment">&lt;!----结束表格-----&gt;</span><span>
+<span id="line873"></span>
+<span id="line874"></span>
+<span id="line875"></span>
+<span id="line876"></span>
+<span id="line877"></span>
+<span id="line878"></span>
+<span id="line879"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line880"></span>		function showToolbar()
+<span id="line881"></span>		{
+<span id="line882"></span>			if($('#id_showToolbar').attr('value')==" 显示工具 ")
+<span id="line883"></span>			{
+<span id="line884"></span>				$('#id_showToolbar').attr('value',' 隐藏工具 ');
+<span id="line885"></span>				$('.c_dellink').show();
+<span id="line886"></span>				
+<span id="line887"></span>				$('.selectedId_span').show();
+<span id="line888"></span>				$('.toolbar').slideDown();
+<span id="line889"></span>			}else 
+<span id="line890"></span>			{
+<span id="line891"></span>				$('#id_showToolbar').attr('value',' 显示工具 ');
+<span id="line892"></span>				$('.c_dellink').hide();
+<span id="line893"></span>				$('.selectedId_span').hide();
+<span id="line894"></span>				$('.toolbar').slideUp();
+<span id="line895"></span>			}
+<span id="line896"></span>
+<span id="line897"></span>		}
+<span id="line898"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line899"></span>
+<span id="line900"></span></span><span class="comment">&lt;!-- navnav --&gt;</span><span>
+<span id="line901"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">navnav</a>" <span class="attribute-name">style</span>="<a class="attribute-value">padding-top:10px;background-color:#ffffff;</a>"&gt;</span><span>
+<span id="line902"></span>	</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">id_act</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value">delete</a>"  <span class="attribute-name">name</span>="<a class="attribute-value">act</a>"&gt;</span><span>
+<span id="line903"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">float:left;width:35%;text-align:left</a>"&gt;</span><span>
+<span id="line904"></span>	
+<span id="line905"></span>		</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">id</span>="<a class="attribute-value">id_showToolbar</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 显示工具 </a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">showToolbar();</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line906"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">toolbar</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 全选 </a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">$('.c_select').attr('checked',true);</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line907"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">toolbar</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 反选 </a>"
+<span id="line908"></span>			<span class="attribute-name">onclick</span>="<a class="attribute-value">$('.c_select').each(function(){this.checked=!this.checked;});</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line909"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">toolbar</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 重扫选中 </a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">doRescanAll();</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line910"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">toolbar</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 取消扫描 </a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">doCancelAll();</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line911"></span>
+<span id="line912"></span>							</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">toolbar</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 删除所选 </a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">doDeleteAll();</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line913"></span>			
+<span id="line914"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">class</span>="<a class="attribute-value">toolbar</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display:none</a>" <span class="attribute-name">type</span>="<a class="attribute-value">button</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 查看正在扫描 </a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">document.location='list.php?filter=running'</a>"&gt;</span><span>
+<span id="line915"></span>			
+<span id="line916"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line917"></span>	</span><span title="发现了结束标签“form”，但那是开放元素。" class="error">&lt;/<span class="end-tag">form</span>&gt;</span><span>
+<span id="line918"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">float:left;</a>"&gt;</span><span>
+<span id="line919"></span>		</span><span>&lt;<span class="start-tag">form</span> <span class="attribute-name">method</span>="<a class="attribute-value">get</a>"  <span class="attribute-name">action</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?" class="attribute-value">?</a>"&gt;</span><span>
+<span id="line920"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">name</span>="<a class="attribute-value">batchid</a>" <span class="attribute-name">value</span>="<a class="attribute-value">7115172</a>"&gt;</span><span>
+<span id="line921"></span>			</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">name</span>="<a class="attribute-value">taskfrom</a>" <span class="attribute-name">value</span>="<a class="attribute-value">0</a>"&gt;</span><span>
+<span id="line922"></span>			域名关键字：</span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">name</span>="<a class="attribute-value">searchkey</a>" <span class="attribute-name">size</span>="<a class="attribute-value">20</a>"&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">submit</a>" <span class="attribute-name">value</span>="<a class="attribute-value"> 搜索 </a>" <span class="attribute-name">name</span>="<a class="attribute-value">B1</a>"&gt;</span><span>
+<span id="line923"></span>		</span><span>&lt;/<span class="end-tag">form</span>&gt;</span><span>
+<span id="line924"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line925"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">style</span>="<a class="attribute-value">clear:both</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line926"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line927"></span>
+<span id="line928"></span>
+<span id="line929"></span>
+<span id="line930"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">pageinfo</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center;padding-top:20px;background-color:#ffffff;</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=1&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=" class="attribute-value">?p=1<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ba</span>tchid=7115172<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ta</span>skfrom=0<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>sear</span>chkey=</a>"&gt;</span><span>上一页</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=1&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=" class="attribute-value">?p=1<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ba</span>tchid=7115172<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ta</span>skfrom=0<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>sear</span>chkey=</a>"&gt;</span><span>[1]</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span>2<span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=3&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=" class="attribute-value">?p=3<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ba</span>tchid=7115172<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ta</span>skfrom=0<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>sear</span>chkey=</a>"&gt;</span><span>[3]</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span></span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=3&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=" class="attribute-value">?p=3<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ba</span>tchid=7115172<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>ta</span>skfrom=0<span><span title="“&amp;”并未开始一个字符引用。（也许“&amp;”应该要被跳脱为“&amp;amp;”。）" class="error">&amp;</span>sear</span>chkey=</a>"&gt;</span><span>下一页</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line931"></span>
+<span id="line932"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line933"></span>function doDeleteAll()
+<span id="line934"></span>{
+<span id="line935"></span>	if (confirm("确定删除这些任务记录？\n注意:\n1. 未完成的任务将被终止\n2. 删除扫描记录可能不利于您做风险统计")) {
+<span id="line936"></span>		$("#id_act").attr("value","delete");
+<span id="line937"></span>		document.mainForm.submit();
+<span id="line938"></span>	}
+<span id="line939"></span>}
+<span id="line940"></span>function doCancelAll()
+<span id="line941"></span>{
+<span id="line942"></span>	if (confirm("确定取消这些任务？")) {
+<span id="line943"></span>		$("#id_act").attr("value","cancel");
+<span id="line944"></span>		document.mainForm.submit();
+<span id="line945"></span>	}
+<span id="line946"></span>}
+<span id="line947"></span>function doRescanAll()
+<span id="line948"></span>{
+<span id="line949"></span>	var id="";
+<span id="line950"></span>	$('.c_select').each(function(){
+<span id="line951"></span>		if (this.checked)
+<span id="line952"></span>		{
+<span id="line953"></span>			id+=this.value+",";
+<span id="line954"></span>		}
+<span id="line955"></span>	});
+<span id="line956"></span>
+<span id="line957"></span>	document.location="new.php?id="+id;
+<span id="line958"></span>}
+<span id="line959"></span>
+<span id="line960"></span>function control(str,m) {
+<span id="line961"></span>	if (confirm(m)) {
+<span id="line962"></span>		$.get("control.php?"+str+"&amp;t="+Math.random(), null, 
+<span id="line963"></span>		function (data, textStatus){
+<span id="line964"></span>				if(data=="ok")
+<span id="line965"></span>				{
+<span id="line966"></span>					if(document.location.href.indexOf("list.php")&gt;0){
+<span id="line967"></span>						document.location="list.php?batchid=7115172";
+<span id="line968"></span>					}
+<span id="line969"></span>					else {
+<span id="line970"></span>						window.location.reload();
+<span id="line971"></span>					}
+<span id="line972"></span>				}
+<span id="line973"></span>				else 
+<span id="line974"></span>				{
+<span id="line975"></span>					alert("操作失败:"+data);
+<span id="line976"></span>				}
+<span id="line977"></span>			}
+<span id="line978"></span>		);
+<span id="line979"></span>
+<span id="line980"></span>	}
+<span id="line981"></span>}
+<span id="line982"></span>function resetStatus(tasksJsonStatus)
+<span id="line983"></span>{
+<span id="line984"></span>	for(var a in tasksJsonStatus)
+<span id="line985"></span>	{
+<span id="line986"></span>		var el = document.getElementById("t"+a);
+<span id="line987"></span>		if(!el)  {
+<span id="line988"></span>			//alert("任务列表已更新");
+<span id="line989"></span>			location.reload();
+<span id="line990"></span>			return;
+<span id="line991"></span>		}
+<span id="line992"></span>		if(el.innerHTML!=tasksJsonStatus[a])
+<span id="line993"></span>		{
+<span id="line994"></span>			el.innerHTML = tasksJsonStatus[a];
+<span id="line995"></span>		}
+<span id="line996"></span>	}
+<span id="line997"></span>}
+<span id="line998"></span>lastData="";
+<span id="line999"></span>function updateStatus()
+<span id="line1000"></span>{
+<span id="line1001"></span>		
+$.get("status.php?searchkey=&amp;p=2&amp;filter=&amp;batchid=7115172&amp;taskfrom=0&amp;AITIME=1471437580&amp;t="+Math.random(),
+ null, 
+<span id="line1002"></span>		function (data, textStatus){
+<span id="line1003"></span>			if(textStatus=="success")
+<span id="line1004"></span>			{
+<span id="line1005"></span>				if(data!=lastData &amp;&amp; data!="") {
+<span id="line1006"></span>					lastData = data;
+<span id="line1007"></span>					eval(data);
+<span id="line1008"></span>				}
+<span id="line1009"></span>			}
+<span id="line1010"></span>		}
+<span id="line1011"></span>	);
+<span id="line1012"></span>}
+<span id="line1013"></span>resetStatus({"7115199":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+1\u4e2a\u6f0f\u6d1e\uff084\u4e2a\u63d0\u793a\uff09","7115198":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+4\u4e2a\u6f0f\u6d1e\uff083\u4e2a\u63d0\u793a\uff09","7115197":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+3\u4e2a\u6f0f\u6d1e\uff087\u4e2a\u63d0\u793a\uff09","7115196":"  
+\u5b89\u5168\uff0810\u4e2a\u63d0\u793a\uff09","7115195":"  
+\u5b89\u5168\uff083\u4e2a\u63d0\u793a\uff09","7115194":"  
+\u5b89\u5168","7115193":"  
+\u5b89\u5168\uff084\u4e2a\u63d0\u793a\uff09","7115192":"  
+2\u4e2a\u6f0f\u6d1e\uff082\u4e2a\u63d0\u793a\uff09","7115191":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+3\u4e2a\u6f0f\u6d1e\uff0813\u4e2a\u63d0\u793a\uff09","7115190":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+2\u4e2a\u6f0f\u6d1e\uff0827\u4e2a\u63d0\u793a\uff09","7115189":"  
+\u5b89\u5168\uff084\u4e2a\u63d0\u793a\uff09","7115188":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+13\u4e2a\u6f0f\u6d1e\uff082\u4e2a\u63d0\u793a\uff09","7115187":"  
+\u5b89\u5168\uff081\u4e2a\u63d0\u793a\uff09","7115186":"  
+\u5b89\u5168","7115185":"  
+\u5b89\u5168\uff0814\u4e2a\u63d0\u793a\uff09","7115184":"  
+1\u4e2a\u6f0f\u6d1e\uff081\u4e2a\u63d0\u793a\uff09","7115183":" </span><span>&lt;i</span><span>mg
+ border=0 title='\u4e2d\u5371' src='files\/msg_middle.png'&gt; 
+1\u4e2a\u6f0f\u6d1e\uff081\u4e2a\u63d0\u793a\uff09","7115182":"  
+2\u4e2a\u6f0f\u6d1e\uff083\u4e2a\u63d0\u793a\uff09","7115181":"  
+\u5b89\u5168\uff081\u4e2a\u63d0\u793a\uff09","7115180":" </span><span>&lt;i</span><span>mg border=0 title='\u9ad8\u5371' src='files\/msg_high.png'&gt; 5\u4e2a\u6f0f\u6d1e\uff082\u4e2a\u63d0\u793a\uff09"});
+<span id="line1014"></span>setInterval('updateStatus();', 10*1000);
+<span id="line1015"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line1016"></span>
+<span id="line1017"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line1018"></span>if( screen.width </span><span>&lt;=</span><span>1024){
+<span id="line1019"></span>	$(".width_class").css("width","220px");
+<span id="line1020"></span>}
+<span id="line1021"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1022"></span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line1023"></span>
+<span id="line1024"></span>
+<span id="line1025"></span>
+<span id="line1026"></span>
+<span id="line1027"></span>﻿</span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line1028"></span>.c_AIMap{border-style:solid;border-width:3pt;
+ border-color:#cfcfcf;display:block;position: 
+absolute;width:590px;z-index:1000;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+<span id="line1029"></span></span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line1030"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line1031"></span>function showAbout(){
+<span id="line1032"></span>	$('#id_about').css('visibility','visible');
+<span id="line1033"></span>	$('#id_about').show();
+<span id="line1034"></span>	$('#id_about').css('left','130px');
+<span id="line1035"></span>	return false;
+<span id="line1036"></span>}
+<span id="line1037"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line1038"></span>
+<span id="line1039"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">id_about</a>" <span class="attribute-name">class</span>=<a class="attribute-value">c_AIMap</a> <span class="attribute-name">style</span>="<a class="attribute-value">width:80%;background:#f5f5f5;top:45px;display:none;</a>"&gt;</span><span>
+<span id="line1040"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">maphead</a>" <span class="attribute-name">style</span>="<a class="attribute-value">height:28px;line-height:28px;background:#cfcfcf;text-align:right</a>"&gt;</span><span>
+<span id="line1041"></span>			</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=2&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=#" class="attribute-value">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">$('#id_about').hide();return false;</a>" <span class="attribute-name">style</span>="<a class="attribute-value">color:#000;</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">b</span>&gt;</span><span>关闭</span><span>&lt;/<span class="end-tag">b</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line1042"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1043"></span>   		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">id_about_content</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center</a>"&gt;</span><span>
+<span id="line1044"></span></span><span>&lt;<span class="start-tag">img</span> <span class="attribute-name">src</span>=<a href="view-source:http://www.aisec.com/aiscanner/files/about.png" class="attribute-value">files/about.png</a> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">width</span>=<a class="attribute-value">90%</a> <span class="attribute-name">style</span>='<a class="attribute-value">padding:11px;</a>'&gt;</span><span>		
+<span id="line1045"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1046"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span> 
+<span id="line1047"></span>
+<span id="line1048"></span>
+<span id="line1049"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">ft</a>"&gt;</span><span>
+<span id="line1050"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">wrap</a>"&gt;</span><span>
+<span id="line1051"></span>		</span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">class</span>="<a class="attribute-value">friend</a>"&gt;</span><span>
+<span id="line1052"></span>			
+<span id="line1053"></span>		</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line1054"></span></span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>	
+<span id="line1055"></span>Copyright ©2011-2016 安全检测系统  (Version:3.0 Build:20151214)</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line1056"></span>		 
+<span id="line1057"></span>		</span><span>&lt;<span class="start-tag">font</span> <span class="attribute-name">color</span>=<a class="attribute-value">#555</a>&gt;</span><span>2016-08-17 20:40:32</span><span>&lt;/<span class="end-tag">font</span>&gt;</span><span>
+<span id="line1058"></span>
+<span id="line1059"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1060"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1061"></span></span><span>&lt;<span class="start-tag">br</span>&gt;</span><span>
+<span id="line1062"></span>
+<span id="line1063"></span>
+<span id="line1064"></span>
+<span id="line1065"></span>
+<span id="line1066"></span></span><span title="连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。
+连续的连字号没有结束注释。“--”不被允许在注释当中出现，但“- -”可以。" class="error error error error error error error error error error error error error error error error error error error error error comment">&lt;!---------- map ----------------&gt;</span><span>
+<span id="line1067"></span>
+<span id="line1068"></span>	</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">id_AIMap</a>" <span class="attribute-name">class</span>=<a class="attribute-value">c_AIMap</a> <span class="attribute-name">style</span>="<a class="attribute-value">left:230px;background:#f5f5f5;top:45px;visibility:hidden</a>"&gt;</span><span>
+<span id="line1069"></span>		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">maphead</a>" <span class="attribute-name">style</span>="<a class="attribute-value">height:28px;line-height:28px;background:#cfcfcf;text-align:right</a>"&gt;</span><span>
+<span id="line1070"></span>			</span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.aisec.com/aiscanner/list.php?p=2&amp;batchid=7115172&amp;taskfrom=0&amp;searchkey=#" class="attribute-value">#</a>" <span class="attribute-name">onclick</span>="<a class="attribute-value">showMap();return false;</a>" <span class="attribute-name">style</span>="<a class="attribute-value">color:#000;</a>"&gt;</span><span>关闭</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span><span class="entity"><span>&amp;</span>nbsp;</span><span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line1071"></span>		</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1072"></span>   		</span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">AIChinaMap</a>" <span class="attribute-name">style</span>="<a class="attribute-value">text-align:center</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line1073"></span>	</span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span> 
+<span id="line1074"></span> 
+<span id="line1075"></span>
+<span id="line1076"></span></span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line1077"></span>function hoverMap(area){
+<span id="line1078"></span>	document.location="?taskfromname="+area['name'];
+<span id="line1079"></span>}
+<span id="line1080"></span>
+<span id="line1081"></span>
+<span id="line1082"></span>function showMap(){
+<span id="line1083"></span>	if($('#id_AIMap').css('display')=='none' || $('#id_AIMap').css('visibility')=="hidden"){
+<span id="line1084"></span>		$('#id_AIMap').css('visibility',"visible");
+<span id="line1085"></span>		$('#id_AIMap').show();
+<span id="line1086"></span>	}else{
+<span id="line1087"></span>		$('#id_AIMap').hide();
+<span id="line1088"></span>	}
+<span id="line1089"></span>}
+<span id="line1090"></span>//showMap();
+<span id="line1091"></span>AIMapDatas=[];
+<span id="line1092"></span>function getSplitIndex(chooseSum,sum,index){
+<span id="line1093"></span>	var each=Math.ceil(sum/chooseSum);
+<span id="line1094"></span>	return Math.ceil((index+1)/each)-1;
+<span id="line1095"></span>}
+<span id="line1096"></span>function getAIMapColor(area){
+<span id="line1097"></span>	if(AIMapDatas.length==0) return Raphael.getColor(0.9);
+<span id="line1098"></span>
+<span id="line1099"></span>	//var colors=['#EA0000','#FF4500','#FF9224'];
+<span id="line1100"></span>	var colors=['#FF0000','#FF4500','orange'/*,'#16ce44'*/];
+<span id="line1101"></span>	var i;
+<span id="line1102"></span>	for(i=0;i</span><span>&lt;A</span><span>IMapDatas.length;i++ ){
+<span id="line1103"></span>		if(area==AIMapDatas[i][0]){
+<span id="line1104"></span>			break;
+<span id="line1105"></span>		}
+<span id="line1106"></span>	}
+<span id="line1107"></span>	return colors[getSplitIndex(colors.length,AIMapDatas.length,i)];
+<span id="line1108"></span>}
+<span id="line1109"></span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line1110"></span>
+<span id="line1111"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/raphael-min.js" class="attribute-value">template_dir/1/{$files$}/raphael-min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line1112"></span></span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a href="view-source:http://www.aisec.com/aiscanner/template_dir/1/%7B$files$%7D/chinamap.js" class="attribute-value">template_dir/1/{$files$}/chinamap.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line1113"></span>
+<span id="line1114"></span></span></pre><menu id="actions" type="context"><menuitem accesskey="L" label="转到指定行…" id="goToLine"></menuitem><menuitem type="checkbox" label="长行自动换行" id="wrapLongLines"></menuitem><menuitem checked="true" type="checkbox" label="语法高亮" id="highlightSyntax"></menuitem></menu></body></html>
