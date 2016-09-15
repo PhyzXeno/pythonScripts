@@ -2,12 +2,12 @@
 # coding=utf-8
 import re
 
-file=open('./raw.html','r')
-buf=file.readlines()
-stg=str(buf)
+file=open('./view-source_www.sinomach.com.cn.html','rb')
+buf = file.readlines()
+stg = str(buf)
 file2=open('./rawList.txt','w+')
 
-r=r'"http://download.*?"'
+r=r'"http://www.*?"'
 #r=r'\w{3}'
 #r=r"\w{1,3}?"
 #r=r'href=.*?\s+?'
