@@ -1,11 +1,25 @@
-import os
+import urllib
+import http.client as httplib 
 
-base_path = os.getcwd()
-file_i = open(base_path + '\\' + '4tailNumber.txt','r')
-file_o = open(base_path + '\\' + '1340031.txt','w')
+headers = {
+    'HOST':'www.sjzwhk.com',
+    'User-Agent':'http://www.sjzwhk.com/ashx/Login.ashx?Method=GetRetrieveVerifyCode',
+    'Accept':'http://www.sjzwhk.com/ashx/Login.ashx?Method=GetRetrieveVerifyCode',
+    'Accept-Language':'http://www.sjzwhk.com/ashx/Login.ashx?Method=GetRetrieveVerifyCode',
+    'Accept-Encoding':'gzip, deflate',
+    'Content-Type':'application/x-www-form-urlencoded',
+    'X-Requested-With':'XMLHttpRequest',
+    'Referer':'http://www.sjzwhk.com/RetrievePassword.aspx',
+    'Content-Length':'40',
+    'Connection':'close'
+}
 
-for line in file_i:
-        file_o.writelines('1340031' + line)
+params = urllib.parse.urlencode({
+    'MobileTel':'18811392560',
+    'VerifyCodeSerial': '3'
+})
 
-file_i.close()
-file_o.close()
+conn = httplib.HTTPConnection('www.sjzwhk.com/RetrievePassword.aspx')
+conn.request('POST','', params, headers)
+response = conn.getresponse()
+print(response.status, response.reason)
