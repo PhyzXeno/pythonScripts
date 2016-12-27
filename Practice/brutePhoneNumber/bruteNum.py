@@ -1,5 +1,6 @@
 import urllib
-import http.client as httplib 
+import http.client 
+import os
 
 headers = {
     'HOST':'www.sjzwhk.com',
@@ -14,12 +15,22 @@ headers = {
     'Connection':'close'
 }
 
-params = urllib.parse.urlencode({
-    'MobileTel':'18811392560',
-    'VerifyCodeSerial': '3'
-})
+base_path = os.getcwd()
+file_i = open(base_path + '\\' + '1340031.txt', )
+for line in file_i:
+    params = urllib.parse.urlencode({
+        'MobileTel': line,
+        'VerifyCodeSerial': '3'
+    })
+    conn = http.client.HTTPConnection('www.sjzwhk.com')
+    conn.request('POST','/ashx/Login.ashx?Method=GetRetrieveVerifyCode', params, headers)
+    response = conn.getresponse()
+    #print(response.status, response.reason)
+    #print(response.read())
+    resp_bytes = response.read()
+    resp_str = str(resp_bytes, encoding='utf-8')
+    if '1' in resp_str:
+        print(line)
+        print(resp_str)
+    
 
-conn = httplib.HTTPConnection('www.sjzwhk.com/RetrievePassword.aspx')
-conn.request('POST','', params, headers)
-response = conn.getresponse()
-print(response.status, response.reason)
