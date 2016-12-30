@@ -1,0 +1,17 @@
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+248227        0x3C9A3         Unix path: /api.machtalk.net/v1.0/devicepin/add
+255088        0x3E470         CRC32 polynomial table, little endian
+256115        0x3E873         Unix path: /external/freertos/Source/queue.c
+257279        0x3ECFF         Unix path: /external/freertos/Source/timers.c
+263556        0x40584         Unix path: /src/drivers/mw300/mdev_uart.c
+264210        0x40812         Unix path: /src/drivers/mw300/mdev_i2c.c
+264836        0x40A84         Unix path: /src/drivers/mw300/mdev_dma.c
+267903        0x4167F         xz compressed data
+269199        0x41B8F         Unix path: /src/wlan/wifidriver/mlan_glue.c
+270842        0x421FA         Unix path: /src/wlan/wifidriver/wifi-uap.c
+275216        0x43310         CRC32 polynomial table, little endian
+277631        0x43C7F         xz compressed data
+277640        0x43C88         SHA256 hash constants, little endian
+
