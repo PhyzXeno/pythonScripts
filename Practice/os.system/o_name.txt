@@ -1,0 +1,13 @@
+Unix path: /api.machtalk.net/v1.0/devicepin/add
+CRC32 polynomial table, little endian
+Unix path: /external/freertos/Source/queue.c
+Unix path: /external/freertos/Source/timers.c
+Unix path: /src/drivers/mw300/mdev_uart.c
+Unix path: /src/drivers/mw300/mdev_i2c.c
+Unix path: /src/drivers/mw300/mdev_dma.c
+xz compressed data
+Unix path: /src/wlan/wifidriver/mlan_glue.c
+Unix path: /src/wlan/wifidriver/wifi-uap.c
+CRC32 polynomial table, little endian
+xz compressed data
+SHA256 hash constants, little endian
