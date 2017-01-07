@@ -34,3 +34,4 @@ response = conn.getresponse()#取得response对象
 resp_bytes = response.read()#读取response对象，read出来的是byte类型数据（即一个一个输出是asc码）
 resp_str = str(resp_bytes, encoding='utf-8')#byte转换为str型数据
 print(resp_str)#显示一下str
+
