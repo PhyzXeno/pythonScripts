@@ -8,7 +8,6 @@
             "request": "launch",
             "stopOnEntry": true,
             "program": "${file}",
-            //"program": "C:/Python27/python.exe",
             "debugOptions": [
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
