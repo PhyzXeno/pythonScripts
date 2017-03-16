@@ -14,3 +14,5 @@ def segIP():
 def genIP():
     return segIP()+"."+segIP()+"."+segIP()+"."+segIP()
 
+print(genIP())
+
