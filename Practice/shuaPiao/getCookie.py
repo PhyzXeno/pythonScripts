@@ -29,3 +29,4 @@ def getCookie():
    a = a[a.index("=")+1:a.index(";")]
    return a
 
+#print(getCookie())

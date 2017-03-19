@@ -36,8 +36,9 @@ def submitExecute():
 
 def main():
     while 1:
-        sleeptime = random.randrange(50,100,1)
-        time.sleep(sleeptime)
+        #sleeptime = random.randrange(50,100,1)
+        #time.sleep(sleeptime)
+        time.sleep(0.5)
         submitExecute()
 
 main()
