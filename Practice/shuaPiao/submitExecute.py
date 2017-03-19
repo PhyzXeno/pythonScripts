@@ -2,6 +2,7 @@ import genIP
 import getCookie
 import requests
 import time
+import random
 
 def submitExecute():
 
@@ -35,7 +36,8 @@ def submitExecute():
 
 def main():
     while 1:
-        time.sleep(0.5)
+        sleeptime = random.randrange(50,100,1)
+        time.sleep(sleeptime)
         submitExecute()
 
 main()
