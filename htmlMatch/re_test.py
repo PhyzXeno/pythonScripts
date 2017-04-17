@@ -1,21 +1,9 @@
-#!/usr/bin/env python
-# coding=utf-8
 import re
 
-file=open('./view-source_www.sinomach.com.cn.html','rb')
-buf = file.readlines()
-stg = str(buf)
-file2=open('./rawList.txt','w+')
+file = open('view-source_www.sinomach.com.cn.html','r',encoding='utf-8')    # 以utf-8编码，只读模式打开一个html源代码
+print(type(file))
 
-r=r'"http://www.*?"'
-#r=r'\w{3}'
-#r=r"\w{1,3}?"
-#r=r'href=.*?\s+?'
-xxmap=re.compile(r)
-map=xxmap.findall(stg)
-for addr in map:
-    file2.write(addr)
-    file2.write('\n')
-file.close()
-file2.close()
+abc = re.findall(r'<a href=".*?"', file.read())                             # 使用findall函数来进行正则匹配
+for i in range(len(abc)):
+    print(abc[i])                                                           # 结果一个个打印出来
 
