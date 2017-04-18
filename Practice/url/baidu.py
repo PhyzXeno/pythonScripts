@@ -47,7 +47,7 @@ class BaiduUrl(threading.Thread):
         f1.close()
         f2.close()
 
-def main(keyword):                                                                               # 这块是threa惯用的写法
+def main(keyword):                                                                               # 这块是threading惯用的写法
     q = queue.Queue()
     for i in range(0,200,10):
         q.put("https://www.baidu.com/s?wd="+keyword+"&pn="+str(i))
