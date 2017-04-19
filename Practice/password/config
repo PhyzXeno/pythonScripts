@@ -1,0 +1,4 @@
+# This is the config rules
+# {web_dict} is one of the words from the parsed host, {passw} is the original weak passwords
+{web_dict}[!@#]{passw}
+(|{web_dict})(|i|@)(|{passw})(|i|@|201[4-7])
